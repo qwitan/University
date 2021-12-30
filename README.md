@@ -78,6 +78,7 @@ given an epsilon
         a1 = 5, a2 = 3  
        
 - given point:
+        
         P(p_x|p_y): P(-5|4) 
 
 - the equations
