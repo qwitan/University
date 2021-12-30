@@ -11,7 +11,7 @@ Please read: https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/
 
 ------------
 
-The function f, an interval [a,b] and an integer n ares given. For our program we use f = exp and [a,b] = [0,2] and n = 5
+The function f, an interval [a,b] and an integer n are given. f = exp and [a,b] = [0,2] and n = 5
 
 - For an integer k in 1..n calculate
 
