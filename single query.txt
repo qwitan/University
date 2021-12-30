@@ -1,0 +1,22 @@
+SELECT 	   r.MapID,
+		   m.Name,
+		   COUNT(DISTINCT c.ID) AS num_cities,
+		   COUNT(DISTINCT r.IDfrom + r.IDto) AS num_roads,
+		   c1.Name,
+		   c2.Name,
+		   r.distance
+FROM 	   [HS-ULM\KRATZER].ROAD r
+INNER JOIN [HS-ULM\KRATZER].MAP m ON r.MapID = m.ID
+INNER JOIN [HS-ULM\KRATZER].CITY c ON r.MapID = c.MapID
+JOIN	   [HS-ULM\KRATZER].CITY c1 ON c1.MapID = r.MapID AND r.IDfrom = c1.ID
+JOIN	   [HS-ULM\KRATZER].CITY c2 ON c2.MapID = r.MapID AND r.IDto = c2.ID 
+WHERE 		r.IDfrom < r.IDto
+AND			r.MapID > 0
+AND 		r.Distance IN (
+			  SELECT  MAX(Distance) 
+			  FROM   [HS-ULM\KRATZER].ROAD
+			  WHERE  MapID = r.MapID
+			  GROUP BY MapID
+			)
+GROUP BY 	r.MapID, m.Name,c1.Name,c2.Name,r.distance
+ORDER BY 	r.MapID ASC
