@@ -61,6 +61,8 @@ Jacobian matrix: https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant
 
 of the partial derivates of the component functions f_k of f with respect to the component x_l of the vector x
 
+------------
+
 - With a starting vector x_0 the iteration: 
 
         vector x_{i+1} = vector x_i - J^{-1} (vector x_i) * f(vector x_i))    ( i = 0,1,2,... )
