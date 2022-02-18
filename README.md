@@ -3,7 +3,7 @@ SQL Assignments
 
 _________________________________________________________________________________________________________________________________________________________
 
-#Monitered Assignment
+# Monitered Assignment
 -----------------------------
 
 A database consisting of tables MAP, CITY, and ROAD is already available (owned by [retracted]). 
